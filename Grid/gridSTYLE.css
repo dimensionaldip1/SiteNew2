@@ -1,0 +1,38 @@
+
+body {
+    background-color: lightblue;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #000;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    grid-template-areas:
+        "header header header header"
+        "menu   main   main   sidebar"
+        "bottom bottom bottom sidebar"
+        "footer footer footer footer";
+}
+
+#box1 { grid-area: header; min-height: 100px; }
+#box2 { grid-area: menu; min-height: 150px; }
+#box3 { grid-area: main; min-height: 150px; }
+#box5 { grid-area: bottom; min-height: 100px; }
+#box4 { grid-area: sidebar; } 
+#box6 { grid-area: footer; min-height: 80px; }
+
+
+
+.middle-wrapper, .left-column, .top-row {
+    display: contents;
+}
